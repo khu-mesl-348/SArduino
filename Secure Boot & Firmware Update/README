@@ -1,3 +1,14 @@
+< Secure Boot >
+- 본 기술은 디바이스 부트 시, 펌웨어의 무결성을 검증하는 기술로써 공격자가 작성한 악성 펌웨어의 실행을 차단한다. Secure Boot는 펌웨어 바이너리를
+기반으로 생성되는 인증 패스워드를 비롯해 Device_Id, Hash 등을 비교 대상으로 하며 SE 내에서 검증을 수행한다. Arduino와 SE는 서로 물리적으로 분리
+되어 있기 때문에 교환 메시지는 암호화하여 교환되고 매 디바이스 부트때 마다 암호 키는 재생성된다. 본 기술을 통해 공격자의 악성 펌웨어의 교체 공격으로
+부터 저사양 IoT 디바이스를 안전하게 보호할 수 있다.
+
+< Secure Firmware Update >
+- 본 기술은 공격자가 시도하는 펌웨어 교체 공격으로부터 디바이스를 보호하기 위한 기술이다. 먼저, 펌웨어 업데이트를 시도하는 주체는 제조 단계에서 SE에 
+주입된 Ownership Password를 포함한 VP(Verification Properties) 검증 단계를 수행한다. 이 검증 단계를 성공적을 완료하였을 경우, 신규 펌웨어 바이너리
+기반의 VP를 SE 내에 업데이트하고 최종적으로 실질적인 신규 펌웨어 업데이트를 진행 할 수 있다. 만약, VP 검증이 실패 된다면, 펌웨어 업데이트를 중단한다.
+
 1. Secure Boot 실행 방법
   1.1. Arduino IDE 설치
   
@@ -7,7 +18,7 @@
   
   1.4. [MCU] 폴더 내 MCU.ino 실행
   
-2. Secure Firmware Update
+2. Secure Firmware Update 실행 방법
   2.1. Arduino IDE 설치
   
   2.2. Arduino와 SE 연결
