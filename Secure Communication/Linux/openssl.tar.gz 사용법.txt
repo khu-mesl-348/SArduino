@@ -1,0 +1,1 @@
+openssl.tar.gz 압축 해제 후 디렉토리 내 setup.sh 실행
