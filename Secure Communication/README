@@ -1,3 +1,10 @@
+< Secure Communication >
+본 기술은 저사양 Device-to-Device 혹은 Device-to-Server간 발생 가능한 데이터의 도청, 교체, 재사용과 같은 위협으로부터 안전한 데이터 통신 환경 구축을
+목표로 구현된 기술이다. Secure Communication은 대표적인 SSL(Secure Socket Layer)인 OpenSSL과 TropicSSL을 활용하여 상호간의 안전한 통신 채널을 조성
+한다. 위 기술을 통해 데이터를 암호화 함으로써 데이터의 안정성을 보장 할 수 있다.
+
+- 실행 방법
+
 1. Arduino IDE 설치
 
 2. WIFI101 쉴드를 Arduino에 연동
