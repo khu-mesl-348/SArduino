@@ -1,0 +1,11 @@
+1. Arduino IDE 설치
+
+2. WIFI101 쉴드를 Arduino에 연동
+
+3. [Arduino]->[Library] 내 tropicssl, WiFi101 라이브러리를 IDE에 import
+
+4. [Linux] 폴더 내 openssl.tar.gz 파일 업로드 후, 압축 해제
+
+5. ./setup.sh 실행
+
+6. [Arduino]->[SSL]->SSL.ino 파일 실행
