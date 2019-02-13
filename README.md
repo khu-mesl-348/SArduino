@@ -7,12 +7,12 @@
  SE(Secure Element)를 디바이스와 연동하였으며 중요 데이터와 각종 비교 검증 프로세스를 SE 내에서 처리함으로써 저사양 IoT 디바이스의 본질적인 문제를
  해결한다
  
-  본 연구는 저사양 IoT 디바이스에 발생 가능한 보안 위협들을 분석하여 내재되어야 할 보안 요소기술 5가지를 정의하였다.
+  본 연구는 저사양 IoT 디바이스에 발생 가능한 보안 위협들을 분석하여 내재되어야 할 보안 요소기술들을 정의하였다.
+
+  1. Secure Boot
+  2. Secure Firmware Update
+  3. Secure Communication
+  4. Remote Attestation
   
-  1. Secure Key Storage Management
-  2. Secure Boot
-  3. Secure Firmware Update
-  4. Secure Communication
-  5. Remote Attestation
-  
+    
   각 요소기술들의 자세한 설명 및 실행 방법은 해당 프로젝트 폴더 내 README를 참조한다
