@@ -1,0 +1,16 @@
+< Remote Attestation >
+- Secure Boot와 같이 디바이스 내부적으로 펌웨어의 무결성 검증 기능 뿐만아니라 외부 서버를 주체로 디바이스의 펌웨어 무결성을 검증할 필요가 있다.
+이에 Remote Attestation 기술은 Root CA에서 발급한 인증서를 기반으로 디바이스를 검증한다. 먼저, 디바이스 제조 단계시, 제조사는 Root CA에서 발급받은 
+인증서를 SE 내에 주입하는 것을 가정으로 한다. 서버의 attestation 요청에 의해 SArduino는 
+
+1. Arduino IDE 설치
+
+2. WIFI101 쉴드를 Arduino에 연동
+
+3. [Arduino]->[Library] 내 tropicssl, WiFi101 라이브러리를 IDE에 import
+
+4. [Linux] 폴더 내 openssl.tar.gz 파일 업로드 후, 압축 해제
+
+5. ./setup.sh 실행
+
+6. [Arduino]->[SSL]->SSL.ino 파일 실행
