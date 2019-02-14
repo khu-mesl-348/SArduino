@@ -1,16 +1,19 @@
 < Remote Attestation >
 - Secure Boot와 같이 디바이스 내부적으로 펌웨어의 무결성 검증 기능 뿐만아니라 외부 서버를 주체로 디바이스의 펌웨어 무결성을 검증할 필요가 있다.
 이에 Remote Attestation 기술은 Root CA에서 발급한 인증서를 기반으로 디바이스를 검증한다. 먼저, 디바이스 제조 단계시, 제조사는 Root CA에서 발급받은 
-인증서를 SE 내에 주입하는 것을 가정으로 한다. 서버의 attestation 요청에 의해 SArduino는 
+인증서를 SE 내에 주입하는 것을 가정으로 한다. Remote Attestation의 동작은 SArduino가 펌웨어 바이너리 기반의 디지털 서명을 생성하고 인증서와 함께 
+서버에 전송함으로써 서버는 해당 디바이스의 무결성을 검증한다. 본 기술을 통해 내부적인 무결성 검증 뿐만아니라 외적으로도 디바이스를 안전하게 보호할 수
+있다.
 
 1. Arduino IDE 설치
 
 2. WIFI101 쉴드를 Arduino에 연동
 
-3. [Arduino]->[Library] 내 tropicssl, WiFi101 라이브러리를 IDE에 import
+3. "Secure Communication" 프로젝트에서 활용한 라이브러리를 IDE에 Import
 
-4. [Linux] 폴더 내 openssl.tar.gz 파일 업로드 후, 압축 해제
+4. [Attestation_Server] 폴더 내 Attestation_Server.c 파일을 Linux 서버에서 실행 (port는 본인이 원하는 번호로 수정)
 
-5. ./setup.sh 실행
+5. [Arduino_Attestation]->Base64.zip 라이브러리를 IDE에 Import
 
-6. [Arduino]->[SSL]->SSL.ino 파일 실행
+5. [Arduino_Attestation]->Arduino_Attestation.ino 파일을 아두이노에 업로드
+
